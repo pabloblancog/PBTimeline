@@ -16,6 +16,7 @@
 		8BD3744D2441BFBB00404989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3744B2441BFBB00404989 /* Main.storyboard */; };
 		8BD3744F2441BFBC00404989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3744E2441BFBC00404989 /* Assets.xcassets */; };
 		8BD374522441BFBC00404989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD374502441BFBC00404989 /* LaunchScreen.storyboard */; };
+		8BD374592441C0AD00404989 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD374582441C0AD00404989 /* TimelineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		8BD3744E2441BFBC00404989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD374512441BFBC00404989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD374532441BFBC00404989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD374582441C0AD00404989 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				8BD374282441BFA900404989 /* PBTimeline.h */,
 				8BD374292441BFA900404989 /* Info.plist */,
+				8BD374582441C0AD00404989 /* TimelineView.swift */,
 			);
 			path = PBTimeline;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				TargetAttributes = {
 					8BD374242441BFA900404989 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					8BD3742D2441BFA900404989 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -263,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD374592441C0AD00404989 /* TimelineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +442,7 @@
 		8BD3743A2441BFA900404989 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B7S28UQF8S;
@@ -453,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pabloblanco.PBTimeline;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +468,7 @@
 		8BD3743B2441BFA900404989 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B7S28UQF8S;
@@ -485,6 +493,7 @@
 		8BD3743D2441BFA900404989 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7S28UQF8S;
 				INFOPLIST_FILE = PBTimelineTests/Info.plist;
@@ -503,6 +512,7 @@
 		8BD3743E2441BFA900404989 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7S28UQF8S;
 				INFOPLIST_FILE = PBTimelineTests/Info.plist;
