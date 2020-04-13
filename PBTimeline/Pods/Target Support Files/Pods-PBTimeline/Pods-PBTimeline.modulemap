@@ -1,0 +1,6 @@
+framework module Pods_PBTimeline {
+  umbrella header "Pods-PBTimeline-umbrella.h"
+
+  export *
+  module * { export * }
+}
