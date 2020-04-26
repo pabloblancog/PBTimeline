@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UINib {
+public extension UINib {
     class func from(_ nibName: String) -> UINib? {
         guard !nibName.isEmpty else {
             return nil

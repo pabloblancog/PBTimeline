@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIStackView {
+public extension UIStackView {
     
     @discardableResult
     func addView(_ view: UIView, height: CGFloat, width: CGFloat) -> (widthConstraint: NSLayoutConstraint, heightConstraint: NSLayoutConstraint) {
@@ -24,6 +24,20 @@ extension UIStackView {
         return (widthConstraint, heightConstraint)
     }
     
+    @discardableResult
+    func insertView(_ view: UIView, atIndex index: Int, height: CGFloat = 100, width: CGFloat = 100) -> (widthConstraint: NSLayoutConstraint, heightConstraint: NSLayoutConstraint) {
+        
+        let heightConstraint = view.heightAnchor.constraint(equalToConstant: height)
+        heightConstraint.isActive = true
+        
+        let widthConstraint = view.widthAnchor.constraint(equalToConstant: width)
+        widthConstraint.isActive = true
+        
+        self.insertArrangedSubview(view, at: index)
+        
+        return (widthConstraint, heightConstraint)
+    }
+
     func removeView(_ view: UIView) {
         self.removeArrangedSubview(view)
     }

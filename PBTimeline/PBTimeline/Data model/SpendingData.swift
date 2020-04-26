@@ -16,11 +16,16 @@ public struct SpendingData: TimelineCustomDataProtocol {
         return spendingData[dateHashString]
     }
     
-    var spendingData: [String?: Double] { return [Date().dateHashString: spendingProgress(forSpending: 15),
-                                                  Date().addingDays(days: 1)!.dateHashString: spendingProgress(forSpending: 40),
-                                                  Date().addingDays(days: 2)!.dateHashString: spendingProgress(forSpending: 35),
-                                                  Date().addingDays(days: 3)!.dateHashString: spendingProgress(forSpending: 10),
-                                                  Date().addingDays(days: 4)!.dateHashString: spendingProgress(forSpending: 20)]
+    var spendingData: [String?: Double] {
+        do {
+            return [Date().dateHashString: spendingProgress(forSpending: 15),
+                    try Date().addingDays(days: 1).dateHashString: spendingProgress(forSpending: 40),
+                    try Date().addingDays(days: 2).dateHashString: spendingProgress(forSpending: 35),
+                    try Date().addingDays(days: 3).dateHashString: spendingProgress(forSpending: 10),
+                    try Date().addingDays(days: 4).dateHashString: spendingProgress(forSpending: 20)]
+        } catch {
+            return [:]
+        }
     }
     
     static let totalSpendingPerDay: Double = 50

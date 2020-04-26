@@ -3,28 +3,27 @@ PODS:
   - PBTimeline (0.0.1):
     - MKRingProgressView
     - PBUtils
-  - PBUtils (0.0.4)
+  - PBUtils (0.0.6)
 
 DEPENDENCIES:
   - MKRingProgressView
   - PBTimeline (from `../.`)
-  - PBUtils (from `../../PBUtils`)
+  - PBUtils
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - MKRingProgressView
+    - PBUtils
 
 EXTERNAL SOURCES:
   PBTimeline:
     :path: "../."
-  PBUtils:
-    :path: "../../PBUtils"
 
 SPEC CHECKSUMS:
   MKRingProgressView: b558eff66a648bd77b11f61cfc5603ae96008077
-  PBTimeline: 66558732afca0d7657a1dde570ee943336f036cd
-  PBUtils: 7a0b6a7c957de6dbe0366c87dc9b02a62347217b
+  PBTimeline: 7f2600b8a1d6c61ebd3c5420f27ca690c870719c
+  PBUtils: 22cb3da94332d581c1a92ec8843107d0e75330da
 
-PODFILE CHECKSUM: 1ff4b34753e0cf655f0fa619fe9bcb43e45de4cc
+PODFILE CHECKSUM: 98ae6a6c4afd3bb55bbdd47e3d387105c0015d52
 
 COCOAPODS: 1.9.1

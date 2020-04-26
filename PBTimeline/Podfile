@@ -9,7 +9,7 @@ target 'PBTimeline' do
 
   # Pods for PBTimeline
   #pod 'PBUtils'
-  pod 'PBUtils', :path => '../../PBUtils'
+  pod 'PBUtils'
   pod 'MKRingProgressView'
 
   target 'PBTimelineTests' do
@@ -24,7 +24,6 @@ target 'PBTimelineExamples' do
 
   # Pods for PBTimelineExamples
   # pod 'PBUtils'
-  pod 'PBUtils', :path => '../../PBUtils'
   pod 'PBTimeline', :path => '../.'
   pod 'MKRingProgressView'
 

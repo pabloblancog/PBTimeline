@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B4ABCD3DB921659A100334A /* Pods_PBTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3477F6D4334A6C424600E021 /* Pods_PBTimeline.framework */; };
-		71A5F7C7623550B9B63CD7E7 /* Pods_PBTimelineExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD1DCB4C2EDFC6E0D004F14 /* Pods_PBTimelineExamples.framework */; };
+		2937F992F7CA879DDBCA65A0 /* Pods_PBTimeline_PBTimelineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B847EBF81AE8A65C5697D22 /* Pods_PBTimeline_PBTimelineTests.framework */; };
 		8BD3742F2441BFA900404989 /* PBTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD374252441BFA900404989 /* PBTimeline.framework */; };
 		8BD374342441BFA900404989 /* PBTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD374332441BFA900404989 /* PBTimelineTests.swift */; };
 		8BD374362441BFA900404989 /* PBTimeline.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD374282441BFA900404989 /* PBTimeline.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,7 +49,8 @@
 		8BE19FD724437C7400A7C298 /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19FD524437C7400A7C298 /* SummaryView.xib */; };
 		8BE19FD9244431A400A7C298 /* TimelineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19FD8244431A400A7C298 /* TimelineTableView.swift */; };
 		8BE19FDB24443AB900A7C298 /* TimelineEventCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19FDA24443AB900A7C298 /* TimelineEventCategory.swift */; };
-		E3D94685EA8E97EF33446DDC /* Pods_PBTimeline_PBTimelineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A99673B50C5C619F76CF28 /* Pods_PBTimeline_PBTimelineTests.framework */; };
+		CC3807EB941990055F5B9094 /* Pods_PBTimelineExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2590C46654D91AE78D6FBBD /* Pods_PBTimelineExamples.framework */; };
+		E456A1B8A0A3D60F0025F393 /* Pods_PBTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF30AFFF2C88F0BF0CFFEB93 /* Pods_PBTimeline.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +66,9 @@
 /* Begin PBXFileReference section */
 		05352B5A6D30AD0F1785A10E /* Pods-PBTimelineExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBTimelineExamples.release.xcconfig"; path = "Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples.release.xcconfig"; sourceTree = "<group>"; };
 		2895C8E440B1DE08EDCD985D /* Pods-PBTimeline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBTimeline.debug.xcconfig"; path = "Target Support Files/Pods-PBTimeline/Pods-PBTimeline.debug.xcconfig"; sourceTree = "<group>"; };
-		3477F6D4334A6C424600E021 /* Pods_PBTimeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBTimeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53A99673B50C5C619F76CF28 /* Pods_PBTimeline_PBTimelineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBTimeline_PBTimelineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D8A3DC6523AB74F5211249 /* Pods-PBTimelineExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBTimelineExamples.debug.xcconfig"; path = "Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		794E346E63846032353FD526 /* Pods-PBTimeline-PBTimelineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBTimeline-PBTimelineTests.release.xcconfig"; path = "Target Support Files/Pods-PBTimeline-PBTimelineTests/Pods-PBTimeline-PBTimelineTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B847EBF81AE8A65C5697D22 /* Pods_PBTimeline_PBTimelineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBTimeline_PBTimelineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD374252441BFA900404989 /* PBTimeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PBTimeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD374282441BFA900404989 /* PBTimeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBTimeline.h; sourceTree = "<group>"; };
 		8BD374292441BFA900404989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,8 +116,9 @@
 		8BE19FD8244431A400A7C298 /* TimelineTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableView.swift; sourceTree = "<group>"; };
 		8BE19FDA24443AB900A7C298 /* TimelineEventCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEventCategory.swift; sourceTree = "<group>"; };
 		99FCC28580036E431C6233E1 /* Pods-PBTimeline-PBTimelineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBTimeline-PBTimelineTests.debug.xcconfig"; path = "Target Support Files/Pods-PBTimeline-PBTimelineTests/Pods-PBTimeline-PBTimelineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2590C46654D91AE78D6FBBD /* Pods_PBTimelineExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBTimelineExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9577BB8BCBCE7AA96500F19 /* Pods-PBTimeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBTimeline.release.xcconfig"; path = "Target Support Files/Pods-PBTimeline/Pods-PBTimeline.release.xcconfig"; sourceTree = "<group>"; };
-		FBD1DCB4C2EDFC6E0D004F14 /* Pods_PBTimelineExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBTimelineExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF30AFFF2C88F0BF0CFFEB93 /* Pods_PBTimeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBTimeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B4ABCD3DB921659A100334A /* Pods_PBTimeline.framework in Frameworks */,
+				E456A1B8A0A3D60F0025F393 /* Pods_PBTimeline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD3742F2441BFA900404989 /* PBTimeline.framework in Frameworks */,
-				E3D94685EA8E97EF33446DDC /* Pods_PBTimeline_PBTimelineTests.framework in Frameworks */,
+				2937F992F7CA879DDBCA65A0 /* Pods_PBTimeline_PBTimelineTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71A5F7C7623550B9B63CD7E7 /* Pods_PBTimelineExamples.framework in Frameworks */,
+				CC3807EB941990055F5B9094 /* Pods_PBTimelineExamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +153,9 @@
 		3765924DBF3912F3FD496E09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3477F6D4334A6C424600E021 /* Pods_PBTimeline.framework */,
-				53A99673B50C5C619F76CF28 /* Pods_PBTimeline_PBTimelineTests.framework */,
-				FBD1DCB4C2EDFC6E0D004F14 /* Pods_PBTimelineExamples.framework */,
+				FF30AFFF2C88F0BF0CFFEB93 /* Pods_PBTimeline.framework */,
+				7B847EBF81AE8A65C5697D22 /* Pods_PBTimeline_PBTimelineTests.framework */,
+				E2590C46654D91AE78D6FBBD /* Pods_PBTimelineExamples.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 				8BD3742A2441BFA900404989 /* Sources */,
 				8BD3742B2441BFA900404989 /* Frameworks */,
 				8BD3742C2441BFA900404989 /* Resources */,
-				7699E0F74F48A72FAF29B8CF /* [CP] Embed Pods Frameworks */,
+				3172E113495705533146FEBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,8 +416,8 @@
 				8BD3743F2441BFBB00404989 /* Sources */,
 				8BD374402441BFBB00404989 /* Frameworks */,
 				8BD374412441BFBB00404989 /* Resources */,
-				6691A1005F69AB2BDB5947D5 /* [CP] Embed Pods Frameworks */,
 				B42F44E03A672C15CDC6DD86 /* [CP] Copy Pods Resources */,
+				51971F88CAC6EBD4C166B3D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -529,24 +529,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6691A1005F69AB2BDB5947D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7699E0F74F48A72FAF29B8CF /* [CP] Embed Pods Frameworks */ = {
+		3172E113495705533146FEBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -561,6 +544,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PBTimeline-PBTimelineTests/Pods-PBTimeline-PBTimelineTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51971F88CAC6EBD4C166B3D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PBTimelineExamples/Pods-PBTimelineExamples-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		994AAC7CFB7363E022E7AA62 /* [CP] Check Pods Manifest.lock */ = {

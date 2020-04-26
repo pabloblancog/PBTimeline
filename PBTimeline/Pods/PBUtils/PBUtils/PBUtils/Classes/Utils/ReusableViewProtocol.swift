@@ -8,18 +8,21 @@
 
 import UIKit
 
-protocol ReusableViewProtocol: class {
+public protocol ReusableViewProtocol: class {
     static var defaultReuseIdentifier: String { get }
 }
 
-extension ReusableViewProtocol where Self: UIView {
+public extension ReusableViewProtocol where Self: UIView {
     static var defaultReuseIdentifier: String {
         return String(describing: self)
     }
 }
 
-extension UICollectionViewCell: ReusableViewProtocol { }
+public extension ReusableViewProtocol where Self: UIViewController {
+    static var defaultReuseIdentifier: String {
+        return String(describing: self)
+    }
+}
 
-extension UITableViewCell: ReusableViewProtocol { }
-
-extension UITableViewHeaderFooterView: ReusableViewProtocol { }
+extension UIView: ReusableViewProtocol {}
+extension UIViewController: ReusableViewProtocol {}

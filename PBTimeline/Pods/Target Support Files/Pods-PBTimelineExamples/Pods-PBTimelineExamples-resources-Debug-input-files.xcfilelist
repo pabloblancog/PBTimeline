@@ -6,4 +6,3 @@ ${PODS_ROOT}/../PBTimeline/Timeline/Themes/Regular/TimelineRegularHeaderView.xib
 ${PODS_ROOT}/../PBTimeline/Timeline/Themes/Regular/TimelineRegularTableViewCell.xib
 ${PODS_ROOT}/../PBTimeline/Timeline/Themes/Spendings/TimelineSpendingsHeaderView.xib
 ${PODS_ROOT}/../PBTimeline/Timeline/Themes/Spendings/TimelineSpendingsTableViewCell.xib
-${PODS_CONFIGURATION_BUILD_DIR}/PBTimeline/PBTimeline.bundle

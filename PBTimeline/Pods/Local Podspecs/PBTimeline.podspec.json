@@ -21,11 +21,6 @@
   },
   "source_files": "PBTimeline/PBTimeline/**/*.{swift}",
   "resources": "PBTimeline/PBTimeline/**/*.{xcassets,xib,json}",
-  "resource_bundles": {
-    "PBTimeline": [
-      "PBTimeline/Assets/Localization/**/*.strings"
-    ]
-  },
   "static_framework": true,
   "dependencies": {
     "PBUtils": [

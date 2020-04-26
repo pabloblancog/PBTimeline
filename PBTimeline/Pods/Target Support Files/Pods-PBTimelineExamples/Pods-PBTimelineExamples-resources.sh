@@ -104,7 +104,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/../PBTimeline/Timeline/Themes/Regular/TimelineRegularTableViewCell.xib"
   install_resource "${PODS_ROOT}/../PBTimeline/Timeline/Themes/Spendings/TimelineSpendingsHeaderView.xib"
   install_resource "${PODS_ROOT}/../PBTimeline/Timeline/Themes/Spendings/TimelineSpendingsTableViewCell.xib"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PBTimeline/PBTimeline.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/../PBTimeline/Timeline/BubbleLine/BubbleLineView.xib"
@@ -114,7 +113,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/../PBTimeline/Timeline/Themes/Regular/TimelineRegularTableViewCell.xib"
   install_resource "${PODS_ROOT}/../PBTimeline/Timeline/Themes/Spendings/TimelineSpendingsHeaderView.xib"
   install_resource "${PODS_ROOT}/../PBTimeline/Timeline/Themes/Spendings/TimelineSpendingsTableViewCell.xib"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PBTimeline/PBTimeline.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
