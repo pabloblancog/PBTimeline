@@ -17,7 +17,7 @@ public extension RingProgressView {
         setProgress(ringProgress: ringProgress)
     }
     
-    static let defaultColor = UIColor(red: 6, green: 216, blue: 255)
+    static let defaultColor = UIColor.appleRingBlue
     
     func setup(color: UIColor = RingProgressView.defaultColor) {
         startColor = color

@@ -19,4 +19,8 @@ public extension UIColor {
     
     static let background = UIColor(rgb: 0xf8f8f8)
     static let cellBackground = UIColor.white
+    
+    static let appleRingMagenta = UIColor(red: 248, green: 45, blue: 117)
+    static let appleRingBlue = UIColor(red: 6, green: 216, blue: 255)
+    static let appleRingGreen = UIColor(red: 217, green: 253, blue: 100)
 }

@@ -19,7 +19,7 @@ extension Array {
 extension Array where Element == TimelineEventProtocol {
     func sortedByDateInSections(direction: TimelineDirection) -> [(key: String, value: [TimelineEventProtocol])] {
         let eventData = Dictionary(grouping: self) { (event) -> String in
-            return event.date.dateHashString ?? ""
+            return event.startDate.dateHashString ?? ""
         }
         
         switch direction {
@@ -33,9 +33,9 @@ extension Array where Element == TimelineEventProtocol {
     func sortedByDate(direction: TimelineDirection) -> [TimelineEventProtocol] {
         switch direction {
         case .upBottom:
-            return self.sorted(by: { $0.date < $1.date })
+            return self.sorted(by: { $0.startDate < $1.startDate })
         case .bottomUp:
-            return self.sorted(by: { $0.date > $1.date })
+            return self.sorted(by: { $0.startDate > $1.startDate })
         }
     }
     

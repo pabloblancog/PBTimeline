@@ -16,7 +16,16 @@ class TimelineTableViewSectionDelegate: NSObject, UITableViewDelegate {
     
     var theme: TimelineTheme = .regular(direction: .upBottom)
     var events: [TimelineEventProtocol] = []
-    var eventsByDate: [(key: String, value: [TimelineEventProtocol])] = []
+    var eventsByDate: [(key: String, value: [TimelineEventProtocol])] {
+        switch theme {
+        case .regular(let direction):
+            return events.sortedByDateInSections(direction: direction)
+        case .minimal(let direction):
+            return events.sortedByDateInSections(direction: direction)
+        case .compact(let direction, _):
+            return events.sortedByDateInSections(direction: direction)
+        }
+    }
     var customData: TimelineCustomDataProtocol?
     
     weak var timelineTableViewDelegate: TimelineTableViewDelegate?
@@ -28,24 +37,27 @@ class TimelineTableViewSectionDelegate: NSObject, UITableViewDelegate {
     init(events: [TimelineEventProtocol], theme: TimelineTheme, customData: TimelineCustomDataProtocol? = nil, delegate: TimelineTableViewDelegate?) {
         self.theme = theme
         self.events = events
-        
-        switch theme {
-        case .regular(let direction):
-            self.eventsByDate = events.sortedByDateInSections(direction: direction)
-        case .minimal(let direction):
-            self.eventsByDate = events.sortedByDateInSections(direction: direction)
-        case .spendings(let direction):
-            self.eventsByDate = events.sortedByDateInSections(direction: direction)
-        }
         self.customData = customData
         self.timelineTableViewDelegate = delegate
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        switch theme {
+        case .regular:
+            break
+        case .minimal:
+            break
+        case .compact(_, let needsHeader):
+            guard needsHeader else {
+                return nil
+            }
+        }
+        
         let headerView = tableView.dequeueCellForHeader(cellType: theme.headerCellType)
         if let headerView = headerView as? TimelineHeaderViewProtocol,
             let eventsOfSection = eventsByDate[safe: section],
-            let date = eventsOfSection.value[safe: 0]?.date {
+            let date = eventsOfSection.value[safe: 0]?.startDate {
             let text = date.dateString
             
             let position: TimelinePosition
@@ -61,8 +73,36 @@ class TimelineTableViewSectionDelegate: NSObject, UITableViewDelegate {
         return headerView
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let heightInPixelsPerSecond: CGFloat = 1 / 60
+        let defaultHeight: CGFloat = 100
+
+        if let event: TimelineEventProtocol = eventsByDate[safe: indexPath.section]?.value[safe: indexPath.row] {
+            let intervalDuration = CGFloat(event.intervalDurationInSeconds)
+            let height = max(intervalDuration * heightInPixelsPerSecond, defaultHeight)
+            return height
+        }
+        return 0.0
+    }
+    
+    func getIntervalDuration(inMinutes event: TimelineEvent) -> TimeInterval {
+        let startDate = event.startDate
+        let endDate = event.endDate
+        
+        let timeInterval = endDate.timeIntervalSince(startDate)
+        return timeInterval
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return theme.headerHeight
+        switch theme {
+        case .regular:
+            return theme.headerHeight
+        case .minimal:
+            return theme.headerHeight
+        case .compact(_, let needsHeader):
+            return needsHeader ? theme.headerHeight : 0.1
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

@@ -16,7 +16,7 @@ public enum TimelineDirection {
 public enum TimelineTheme {
     case regular(direction: TimelineDirection)
     case minimal(direction: TimelineDirection)
-    case spendings(direction: TimelineDirection)
+    case compact(direction: TimelineDirection, needsHeaders: Bool)
     
     var cellType: UITableViewCell.Type {
         let cellClass: UITableViewCell.Type
@@ -25,8 +25,8 @@ public enum TimelineTheme {
             cellClass = TimelineRegularTableViewCell.self
         case .minimal:
             cellClass = TimelineMinimalTableViewCell.self
-        case .spendings:
-            cellClass = TimelineSpendingsTableViewCell.self
+        case .compact:
+            cellClass = TimelineCompactTableViewCell.self
         }
         return cellClass
     }
@@ -38,8 +38,8 @@ public enum TimelineTheme {
             cellClass = TimelineRegularHeaderView.self
         case .minimal:
             cellClass = TimelineMinimalHeaderView.self
-        case .spendings:
-            cellClass = TimelineSpendingsHeaderView.self
+        case .compact:
+            cellClass = TimelineCompactHeaderView.self
         }
         return cellClass
     }
@@ -50,7 +50,7 @@ public enum TimelineTheme {
             return 40
         case .minimal:
             return 40
-        case .spendings:
+        case .compact:
             return 56
         }
     }
@@ -61,7 +61,7 @@ public enum TimelineTheme {
             return 0.1
         case .minimal:
             return 0.1
-        case .spendings:
+        case .compact:
             return 0.1
         }
     }

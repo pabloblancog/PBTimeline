@@ -13,7 +13,16 @@ class TimelineTableViewSectionDataSource: NSObject, TimelineTableViewDataSourceP
     var events: [TimelineEventProtocol] = []
     var theme: TimelineTheme = .regular(direction: .upBottom)
     
-    var eventsByDate: [(key: String, value: [TimelineEventProtocol])] = []
+    var eventsByDate: [(key: String, value: [TimelineEventProtocol])] {
+        switch theme {
+        case .regular(let direction):
+            return events.sortedByDateInSections(direction: direction)
+        case .minimal(let direction):
+            return events.sortedByDateInSections(direction: direction)
+        case .compact(let direction, _):
+            return events.sortedByDateInSections(direction: direction)
+        }
+    }
     
     override init() {
         super.init()
@@ -22,15 +31,6 @@ class TimelineTableViewSectionDataSource: NSObject, TimelineTableViewDataSourceP
     init(events: [TimelineEventProtocol], theme: TimelineTheme) {
         self.theme = theme
         self.events = events
-
-        switch theme {
-        case .regular(let direction):
-            self.eventsByDate = events.sortedByDateInSections(direction: direction)
-        case .minimal(let direction):
-            self.eventsByDate = events.sortedByDateInSections(direction: direction)
-        case .spendings(let direction):
-            self.eventsByDate = events.sortedByDateInSections(direction: direction)
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

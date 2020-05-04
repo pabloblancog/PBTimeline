@@ -48,12 +48,11 @@ public class TimelineTableView: UITableView {
         case .minimal:
             register(cellIdentifier: TimelineMinimalTableViewCell.defaultReuseIdentifier)
             register(forHeaderFooterViewReuseIdentifier: TimelineMinimalHeaderView.defaultReuseIdentifier)
-        case .spendings:
-            register(cellIdentifier: TimelineSpendingsTableViewCell.defaultReuseIdentifier)
-            register(forHeaderFooterViewReuseIdentifier: TimelineSpendingsHeaderView.defaultReuseIdentifier)
+        case .compact:
+            register(cellIdentifier: TimelineCompactTableViewCell.defaultReuseIdentifier)
+            register(forHeaderFooterViewReuseIdentifier: TimelineCompactHeaderView.defaultReuseIdentifier)
         }
     }
-    
     
     private func setDataSources(events: [TimelineEventProtocol], theme: TimelineTheme, customData: TimelineCustomDataProtocol? = nil, delegate: TimelineTableViewDelegate?) {
         self.timelineDataSource = TimelineTableViewSectionDataSource(events: events, theme: theme)
@@ -61,5 +60,11 @@ public class TimelineTableView: UITableView {
         
         self.dataSource = self.timelineDataSource
         self.delegate = self.timelineDelegate
+    }
+    
+    public func update(events: [TimelineEventProtocol]) {
+        self.timelineDataSource?.events = events
+        self.timelineDelegate?.events = events
+        reloadData()
     }
 }

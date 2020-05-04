@@ -14,63 +14,72 @@ class TimelineTabViewController: UITabBarController, UITabBarControllerDelegate 
     var events: [TimelineEvent] {
         do {
         return [TimelineEvent(id: 1,
-                              date: Date(),
+                              startDate: Date(),
+                              endDate: try Date().addingHours(hours: 1),
                               title: "New York Burguer",
                               description: "Description for event 1",
                               category: TimelineEventCategory.transport,
                               price: 10.0),
                 
                 TimelineEvent(id: 2,
-                              date: try Date().addingDays(days: 1),
+                              startDate: try Date().addingDays(days: 1),
+                              endDate: try Date().addingDays(days: 1).addingHours(hours: 1),
                               title: "Domino's Pizza",
                               description: "Description for event 2",
                               category: TimelineEventCategory.food,
                               price: 15.50),
                 
                 TimelineEvent(id: 3,
-                              date: try Date().addingDays(days: 1),
+                              startDate: try Date().addingDays(days: 1),
+                              endDate: try Date().addingDays(days: 1).addingHours(hours: 1),
                               title: "Starbucks",
                               description: "Description for event 3. This is a very long description to test what happens if a long line is included on the cell... Will it get higher?",
                               category: TimelineEventCategory.home,
                               price: 6.30),
                 
                 TimelineEvent(id: 4,
-                              date: try Date().addingDays(days: 2),
+                              startDate: try Date().addingDays(days: 2),
+                              endDate: try Date().addingDays(days: 2).addingHours(hours: 1),
                               title: "Pizza Hut",
                               description: "Description for event 4",
                               category: TimelineEventCategory.food,
                               price: 17.99),
                 
                 TimelineEvent(id: 5,
-                              date: try Date().addingDays(days: 2),
+                              startDate: try Date().addingDays(days: 2),
+                              endDate: try Date().addingDays(days: 2).addingHours(hours: 1),
                               title: "Espresso",
                               description: "Description for event 5",
                               category: TimelineEventCategory.home,
                               price: 1.10),
                 
                 TimelineEvent(id: 6,
-                              date: try Date().addingDays(days: 2),
+                              startDate: try Date().addingDays(days: 2),
+                              endDate: try Date().addingDays(days: 2).addingHours(hours: 1),
                               title: "Michael's burguer",
                               description: "Description for event 6",
                               category: TimelineEventCategory.transport,
                               price: 12.0),
                 
                 TimelineEvent(id: 7,
-                              date: try Date().addingDays(days: 3),
+                              startDate: try Date().addingDays(days: 3),
+                              endDate: try Date().addingDays(days: 3).addingHours(hours: 1),
                               title: "McDonald's",
                               description: "Description for event 7",
                               category: TimelineEventCategory.transport,
                               price: 7.99),
                 
                 TimelineEvent(id: 8,
-                              date: try Date().addingDays(days: 3),
+                              startDate: try Date().addingDays(days: 3),
+                              endDate: try Date().addingDays(days: 3).addingHours(hours: 1),
                               title: "Coffee house",
                               description: "Description for event 8",
                               category: TimelineEventCategory.home,
                               price: 1.60),
                 
                 TimelineEvent(id: 9,
-                              date: try Date().addingDays(days: 4),
+                              startDate: try Date().addingDays(days: 4),
+                              endDate: try Date().addingDays(days: 4).addingHours(hours: 1),
                               title: "Pizza garden",
                               description: "Description for event 9",
                               category: TimelineEventCategory.food,
@@ -83,25 +92,29 @@ class TimelineTabViewController: UITabBarController, UITabBarControllerDelegate 
     var deliveryEvents: [TimelineEvent] {
         do {
             return [TimelineEvent(id: 1,
-                                  date: Date(),
+                                  startDate: Date(),
+                                  endDate: try Date().addingHours(hours: 1),
                                   title: TimelineProgressCategory.new.name,
                                   description: "08:30h",
                                   category: TimelineProgressCategory.new),
                     
                     TimelineEvent(id: 2,
-                                  date: try Date().addingDays(days: 1),
+                                  startDate: try Date().addingDays(days: 1),
+                                  endDate: try Date().addingDays(days: 1).addingHours(hours: 1),
                                   title: TimelineProgressCategory.collected.name,
                                   description: "09:30h",
                                   category: TimelineProgressCategory.collected),
                     
                     TimelineEvent(id: 3,
-                                  date: try Date().addingDays(days: 1),
+                                  startDate: try Date().addingDays(days: 1),
+                                  endDate: try Date().addingDays(days: 1).addingHours(hours: 1),
                                   title: TimelineProgressCategory.intransit.name,
                                   description: "09:45h",
                                   category: TimelineProgressCategory.intransit),
                     
                     TimelineEvent(id: 4,
-                                  date: try Date().addingDays(days: 2),
+                                  startDate: try Date().addingDays(days: 2),
+                                  endDate: try Date().addingDays(days: 2).addingHours(hours: 1),
                                   title: TimelineProgressCategory.delivered.name,
                                   description: "11:20h",
                                   category: TimelineProgressCategory.delivered)]
@@ -109,48 +122,66 @@ class TimelineTabViewController: UITabBarController, UITabBarControllerDelegate 
             return []
         }
     }
-    var timeTrackingEvents: [TimelineEvent] {
+    var timeTrackingEvents: [TimelineEvent] {        
+        let magenta = UIColor.appleRingMagenta
+        let blue = UIColor.appleRingBlue
+        let green = UIColor.appleRingGreen
+        
         return [TimelineEvent(id: 1,
-                              date: Date(),
+                              startDate: Date(),
+                              endDate: try! Date().addingMinutes(minutes: 30),
                               title: "Workday start",
-                              description: "08:30h",
-                              category: TimelineTimeTrackingCategory.work_start),
+                              description: "08:00h - 08.30h",
+                              category: TimelineTimeTrackingCategory.work_start,
+                              color: blue),
                 
                 TimelineEvent(id: 2,
-                              date: Date(),
+                              startDate: try! Date().addingMinutes(minutes: 30),
+                              endDate: try! Date().addingMinutes(minutes: 60),
                               title: "Coffee break",
-                              description: "09:35h",
-                              category: TimelineTimeTrackingCategory.coffee),
+                              description: "08:30h - 09.00h",
+                              category: TimelineTimeTrackingCategory.coffee,
+                              color: green),
                 
                 TimelineEvent(id: 3,
-                              date: Date(),
+                              startDate: try! Date().addingMinutes(minutes: 60),
+                              endDate: try! Date().addingHours(hours: 5).addingMinutes(minutes: 30),
                               title: "Work",
-                              description: "09:45h",
-                              category: TimelineTimeTrackingCategory.work),
+                              description: "09:00h - 13.30h",
+                              category: TimelineTimeTrackingCategory.work,
+                              color: blue),
                 
                 TimelineEvent(id: 4,
-                              date: Date(),
+                              startDate: try! Date().addingHours(hours: 5).addingMinutes(minutes: 30),
+                              endDate: try! Date().addingHours(hours: 6).addingMinutes(minutes: 30),
                               title: "Lunch",
-                              description: "13.35h",
-                              category: TimelineTimeTrackingCategory.lunch),
+                              description: "13.30h - 14.30h",
+                              category: TimelineTimeTrackingCategory.lunch,
+                              color: magenta),
                 
                 TimelineEvent(id: 5,
-                              date: Date(),
+                              startDate: try! Date().addingHours(hours: 6).addingMinutes(minutes: 30),
+                              endDate: try! Date().addingHours(hours: 8).addingMinutes(minutes: 30),
                               title: "Work",
-                              description: "14:30h",
-                              category: TimelineTimeTrackingCategory.work),
+                              description: "14:30h - 16.30h",
+                              category: TimelineTimeTrackingCategory.work,
+                              color: blue),
                 
                 TimelineEvent(id: 6,
-                              date: Date(),
-                              title: "Office > Banco Santander",
-                              description: "14.35h",
-                              category: TimelineTimeTrackingCategory.location_change),
+                              startDate: try! Date().addingHours(hours: 8).addingMinutes(minutes: 30),
+                              endDate: try! Date().addingHours(hours: 9),
+                              title: "Location change: Banco Santander",
+                              description: "16.30h - 17.00h",
+                              category: TimelineTimeTrackingCategory.location_change,
+                              color: green),
                 
                 TimelineEvent(id: 7,
-                              date: Date(),
-                              title: "Work day end",
-                              description: "17:30h",
-                              category: TimelineTimeTrackingCategory.work_end)]
+                              startDate: try! Date().addingHours(hours: 9),
+                              endDate: try! Date().addingHours(hours: 10),
+                              title: "Work",
+                              description: "17:00h - 18.00h",
+                              category: TimelineTimeTrackingCategory.work_end,
+                              color: blue)]
     }
     
     override func viewDidLoad() {
@@ -167,11 +198,11 @@ class TimelineTabViewController: UITabBarController, UITabBarControllerDelegate 
         
         let spendingData = SpendingData()
         
-        let timelineSpendingsVC = TimelineTableViewController(timelineTheme: .spendings(direction: .bottomUp), events: events, customData: spendingData)
+        let timelineSpendingsVC = TimelineTableViewController(timelineTheme: .compact(direction: .bottomUp, needsHeaders: true), events: events, customData: spendingData)
         let timelineMinimalVC = TimelineTableViewController(timelineTheme: .minimal(direction: .bottomUp), events: events)
         let timelineRegularVC = TimelineTableViewController(timelineTheme: .regular(direction: .bottomUp), events: events)
         let timelineDeliveryVC = TimelineTableViewController(timelineTheme: .regular(direction: .upBottom), events: deliveryEvents)
-        let timelineTimeTrackingVC = TimelineTableViewController(timelineTheme: .regular(direction: .upBottom), events: timeTrackingEvents)
+        let timelineTimeTrackingVC = TimelineTableViewController(timelineTheme: .compact(direction: .upBottom, needsHeaders: false), events: timeTrackingEvents)
         
         timelineSpendingsVC.tabBarItem = UITabBarItem(title: "Spendings", image: nil, selectedImage: nil)
         timelineMinimalVC.tabBarItem = UITabBarItem(title: "Minimal", image: nil, selectedImage: nil)
