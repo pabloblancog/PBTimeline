@@ -11,8 +11,6 @@ import PBTimeline
 
 class TimelineTableViewController: UIViewController {
 
-    @IBOutlet weak var summaryView: SummaryView!
-    @IBOutlet weak var todaySummaryView: SummaryView!
     @IBOutlet weak var timelineTableView: TimelineTableView!
     
     override func viewDidLoad() {
@@ -21,19 +19,7 @@ class TimelineTableViewController: UIViewController {
         timelineTableView.setup(events: events,
                                 theme: timelineTheme,
                                 customData: customData,
-                                delegate: self)
-        
-        summaryView.setup(summaryViewData: SummaryViewData(ringProgress: 0.25,
-                                                           ringColor: UIColor(red: 248, green: 45, blue: 117),
-                                                           titleText: "You are doing it right!",
-                                                           descriptionText: "You saved a lot of money, you can spend 50€ per day till finish",
-                                                           progressTrendImage: nil))
-        
-        todaySummaryView.setup(summaryViewData: SummaryViewData(ringProgress: 0.66,
-                                                                ringColor: UIColor(red: 217, green: 253, blue: 100),
-                                                                titleText: "You are doing it right!",
-                                                                descriptionText: "You saved a lot of money, you can spend 50€ per day till finish",
-                                                                progressTrendImage: nil))
+                                delegate: self)        
     }
     
     var timelineTheme: TimelineTheme = .regular(direction: .upBottom)

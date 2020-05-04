@@ -1,5 +1,5 @@
 //
-//  TimelineSpendingsTableViewCell.swift
+//  TimelineCompactTableViewCell.swift
 //  PBTimeline
 //
 //  Created by Pablo Blanco González on 15/03/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineSpendingsTableViewCell: UITableViewCell, TimelineCellProtocol {
+class TimelineCompactTableViewCell: UITableViewCell, TimelineCellProtocol {
     
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomMarginConstraint: NSLayoutConstraint!
@@ -16,14 +16,16 @@ class TimelineSpendingsTableViewCell: UITableViewCell, TimelineCellProtocol {
     @IBOutlet weak var eventTitleLabel: UILabel! {
         didSet {
             eventTitleLabel.font = UIFont.systemFont(ofSize: 16,
-                                                     weight: .regular)
+                                                     weight: .bold)
+            eventTitleLabel.backgroundColor = .clear
         }
     }
     @IBOutlet weak var eventDescriptionLabel: UILabel? {
         didSet {
             eventDescriptionLabel?.font = UIFont.systemFont(ofSize: 14,
                                                             weight: .light)
-            eventDescriptionLabel?.textColor = UIColor.gray
+            eventDescriptionLabel?.textColor = UIColor.black
+            eventDescriptionLabel?.backgroundColor = .clear
         }
     }
     @IBOutlet weak var eventPriceLabel: UILabel? {
@@ -32,6 +34,7 @@ class TimelineSpendingsTableViewCell: UITableViewCell, TimelineCellProtocol {
                                                       weight: .regular)
             eventPriceLabel?.textAlignment = .right
             eventPriceLabel?.textColor = .blue
+            eventPriceLabel?.backgroundColor = .clear
         }
     }
 
@@ -42,6 +45,7 @@ class TimelineSpendingsTableViewCell: UITableViewCell, TimelineCellProtocol {
                                                        bottom: 20,
                                                        right: 20)
             dataStackView.isLayoutMarginsRelativeArrangement = true
+            dataStackView.backgroundColor = .clear
         }
     }
 
@@ -54,26 +58,29 @@ class TimelineSpendingsTableViewCell: UITableViewCell, TimelineCellProtocol {
             eventPriceLabel?.isHidden = event?.price == nil
         }
     }
+    
+    static let alpha: CGFloat = 0.1
     var position: EventTimelinePosition = EventTimelinePosition(rowPosition: .middle, sectionPosition: .middle) {
         didSet {
             let dataStackViewBackground = UIView.backgroundView(frame: dataStackView.bounds,
                                                                 color: .cellBackground,
                                                                 cornerRadius: 10.0,
                                                                 corners: position.corners)
+            dataStackViewBackground.backgroundColor = event?.color.withAlphaComponent(TimelineCompactTableViewCell.alpha)
             self.dataStackViewBackground = dataStackViewBackground
             dataStackView.insertSubview(dataStackViewBackground, at: 0)
             
             switch self.position.rowPosition {
             case .top:
                 topMarginConstraint.constant = 10
-                bottomMarginConstraint.constant = 1
+                bottomMarginConstraint.constant = 2
             case .bottom:
-                topMarginConstraint.constant = 1
+                topMarginConstraint.constant = 2
                 bottomMarginConstraint.constant = 10
             case .middle,
                  .none:
-                topMarginConstraint.constant = 0
-                bottomMarginConstraint.constant = 0
+                topMarginConstraint.constant = 2
+                bottomMarginConstraint.constant = 2
             case .singleElement:
                 topMarginConstraint.constant = 10
                 bottomMarginConstraint.constant = 10
@@ -94,7 +101,7 @@ class TimelineSpendingsTableViewCell: UITableViewCell, TimelineCellProtocol {
     }
     
     func commonInit() {
-        backgroundColor = .background
+        backgroundColor = .clear //.background
         selectionStyle = .none
     }
     

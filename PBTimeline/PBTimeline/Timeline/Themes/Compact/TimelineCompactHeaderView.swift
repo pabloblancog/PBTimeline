@@ -1,5 +1,5 @@
 //
-//  TimelineSpendingsHeaderView.swift
+//  TimelineCompactHeaderView.swift
 //  PBTimeline
 //
 //  Created by Pablo Blanco González on 15/03/2020.
@@ -9,7 +9,7 @@
 import UIKit
 import MKRingProgressView
 
-class TimelineSpendingsHeaderView: UITableViewHeaderFooterView, TimelineHeaderViewProtocol {
+class TimelineCompactHeaderView: UITableViewHeaderFooterView, TimelineHeaderViewProtocol {
     
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
@@ -37,7 +37,7 @@ class TimelineSpendingsHeaderView: UITableViewHeaderFooterView, TimelineHeaderVi
             let progressData = customData.data(forDateHash: dateHash) as? Double
             self.ringCircularProgressView = RingProgressView(ringProgress: progressData ?? 0.0)
         }
-        self.backgroundColor = .background
+        self.backgroundColor = .clear //.background
     }
     
     

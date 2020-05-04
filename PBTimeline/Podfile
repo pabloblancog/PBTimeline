@@ -8,8 +8,7 @@ target 'PBTimeline' do
   use_frameworks!
 
   # Pods for PBTimeline
-  #pod 'PBUtils'
-  pod 'PBUtils'
+  pod 'PBUtils', :path => '../../PBUtils'
   pod 'MKRingProgressView'
 
   target 'PBTimelineTests' do
@@ -25,6 +24,5 @@ target 'PBTimelineExamples' do
   # Pods for PBTimelineExamples
   # pod 'PBUtils'
   pod 'PBTimeline', :path => '../.'
-  pod 'MKRingProgressView'
 
 end

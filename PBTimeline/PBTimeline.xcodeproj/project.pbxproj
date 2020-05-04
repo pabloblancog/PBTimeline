@@ -22,10 +22,10 @@
 		8BE19F9524424A6500A7C298 /* TimelineTableViewDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7124424A6500A7C298 /* TimelineTableViewDataSourceProtocol.swift */; };
 		8BE19F9624424A6500A7C298 /* BubbleLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7324424A6500A7C298 /* BubbleLineView.swift */; };
 		8BE19F9724424A6500A7C298 /* BubbleLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19F7424424A6500A7C298 /* BubbleLineView.xib */; };
-		8BE19F9924424A6500A7C298 /* TimelineSpendingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7824424A6500A7C298 /* TimelineSpendingsHeaderView.swift */; };
-		8BE19F9A24424A6500A7C298 /* TimelineSpendingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7924424A6500A7C298 /* TimelineSpendingsTableViewCell.swift */; };
-		8BE19F9B24424A6500A7C298 /* TimelineSpendingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19F7A24424A6500A7C298 /* TimelineSpendingsTableViewCell.xib */; };
-		8BE19F9C24424A6500A7C298 /* TimelineSpendingsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19F7B24424A6500A7C298 /* TimelineSpendingsHeaderView.xib */; };
+		8BE19F9924424A6500A7C298 /* TimelineCompactHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7824424A6500A7C298 /* TimelineCompactHeaderView.swift */; };
+		8BE19F9A24424A6500A7C298 /* TimelineCompactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7924424A6500A7C298 /* TimelineCompactTableViewCell.swift */; };
+		8BE19F9B24424A6500A7C298 /* TimelineCompactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19F7A24424A6500A7C298 /* TimelineCompactTableViewCell.xib */; };
+		8BE19F9C24424A6500A7C298 /* TimelineCompactHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19F7B24424A6500A7C298 /* TimelineCompactHeaderView.xib */; };
 		8BE19F9D24424A6500A7C298 /* TimelineTableViewSectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7D24424A6500A7C298 /* TimelineTableViewSectionDataSource.swift */; };
 		8BE19F9E24424A6500A7C298 /* TimelineTableViewSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F7E24424A6500A7C298 /* TimelineTableViewSectionDelegate.swift */; };
 		8BE19F9F24424A6500A7C298 /* TimelineMinimalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19F8024424A6500A7C298 /* TimelineMinimalHeaderView.swift */; };
@@ -45,8 +45,6 @@
 		8BE19FD024437B1800A7C298 /* NewEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19FCB24437B1800A7C298 /* NewEventViewController.xib */; };
 		8BE19FD124437B1800A7C298 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19FCC24437B1800A7C298 /* NewEventViewController.swift */; };
 		8BE19FD224437B1800A7C298 /* TimelineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19FCD24437B1800A7C298 /* TimelineTableViewController.xib */; };
-		8BE19FD624437C7400A7C298 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19FD424437C7400A7C298 /* SummaryView.swift */; };
-		8BE19FD724437C7400A7C298 /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE19FD524437C7400A7C298 /* SummaryView.xib */; };
 		8BE19FD9244431A400A7C298 /* TimelineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19FD8244431A400A7C298 /* TimelineTableView.swift */; };
 		8BE19FDB24443AB900A7C298 /* TimelineEventCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE19FDA24443AB900A7C298 /* TimelineEventCategory.swift */; };
 		CC3807EB941990055F5B9094 /* Pods_PBTimelineExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2590C46654D91AE78D6FBBD /* Pods_PBTimelineExamples.framework */; };
@@ -88,10 +86,10 @@
 		8BE19F7124424A6500A7C298 /* TimelineTableViewDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewDataSourceProtocol.swift; sourceTree = "<group>"; };
 		8BE19F7324424A6500A7C298 /* BubbleLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleLineView.swift; sourceTree = "<group>"; };
 		8BE19F7424424A6500A7C298 /* BubbleLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BubbleLineView.xib; sourceTree = "<group>"; };
-		8BE19F7824424A6500A7C298 /* TimelineSpendingsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineSpendingsHeaderView.swift; sourceTree = "<group>"; };
-		8BE19F7924424A6500A7C298 /* TimelineSpendingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineSpendingsTableViewCell.swift; sourceTree = "<group>"; };
-		8BE19F7A24424A6500A7C298 /* TimelineSpendingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineSpendingsTableViewCell.xib; sourceTree = "<group>"; };
-		8BE19F7B24424A6500A7C298 /* TimelineSpendingsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineSpendingsHeaderView.xib; sourceTree = "<group>"; };
+		8BE19F7824424A6500A7C298 /* TimelineCompactHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCompactHeaderView.swift; sourceTree = "<group>"; };
+		8BE19F7924424A6500A7C298 /* TimelineCompactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCompactTableViewCell.swift; sourceTree = "<group>"; };
+		8BE19F7A24424A6500A7C298 /* TimelineCompactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineCompactTableViewCell.xib; sourceTree = "<group>"; };
+		8BE19F7B24424A6500A7C298 /* TimelineCompactHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineCompactHeaderView.xib; sourceTree = "<group>"; };
 		8BE19F7D24424A6500A7C298 /* TimelineTableViewSectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewSectionDataSource.swift; sourceTree = "<group>"; };
 		8BE19F7E24424A6500A7C298 /* TimelineTableViewSectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewSectionDelegate.swift; sourceTree = "<group>"; };
 		8BE19F8024424A6500A7C298 /* TimelineMinimalHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineMinimalHeaderView.swift; sourceTree = "<group>"; };
@@ -111,8 +109,6 @@
 		8BE19FCB24437B1800A7C298 /* NewEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewEventViewController.xib; sourceTree = "<group>"; };
 		8BE19FCC24437B1800A7C298 /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		8BE19FCD24437B1800A7C298 /* TimelineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewController.xib; sourceTree = "<group>"; };
-		8BE19FD424437C7400A7C298 /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
-		8BE19FD524437C7400A7C298 /* SummaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
 		8BE19FD8244431A400A7C298 /* TimelineTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableView.swift; sourceTree = "<group>"; };
 		8BE19FDA24443AB900A7C298 /* TimelineEventCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEventCategory.swift; sourceTree = "<group>"; };
 		99FCC28580036E431C6233E1 /* Pods-PBTimeline-PBTimelineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBTimeline-PBTimelineTests.debug.xcconfig"; path = "Target Support Files/Pods-PBTimeline-PBTimelineTests/Pods-PBTimeline-PBTimelineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,7 +203,6 @@
 		8BD374442441BFBB00404989 /* PBTimelineExamples */ = {
 			isa = PBXGroup;
 			children = (
-				8BE19FD324437C7400A7C298 /* Summary */,
 				8BE19FC824437B1800A7C298 /* Scenes */,
 				8BD374452441BFBB00404989 /* AppDelegate.swift */,
 				8BD3744E2441BFBC00404989 /* Assets.xcassets */,
@@ -261,23 +256,23 @@
 		8BE19F7624424A6500A7C298 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				8BE19F7724424A6500A7C298 /* Spendings */,
 				8BE19F7C24424A6500A7C298 /* Data Source */,
+				8BE19F7724424A6500A7C298 /* Compact */,
 				8BE19F7F24424A6500A7C298 /* Minimal */,
 				8BE19F8424424A6500A7C298 /* Regular */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
 		};
-		8BE19F7724424A6500A7C298 /* Spendings */ = {
+		8BE19F7724424A6500A7C298 /* Compact */ = {
 			isa = PBXGroup;
 			children = (
-				8BE19F7824424A6500A7C298 /* TimelineSpendingsHeaderView.swift */,
-				8BE19F7924424A6500A7C298 /* TimelineSpendingsTableViewCell.swift */,
-				8BE19F7A24424A6500A7C298 /* TimelineSpendingsTableViewCell.xib */,
-				8BE19F7B24424A6500A7C298 /* TimelineSpendingsHeaderView.xib */,
+				8BE19F7824424A6500A7C298 /* TimelineCompactHeaderView.swift */,
+				8BE19F7924424A6500A7C298 /* TimelineCompactTableViewCell.swift */,
+				8BE19F7A24424A6500A7C298 /* TimelineCompactTableViewCell.xib */,
+				8BE19F7B24424A6500A7C298 /* TimelineCompactHeaderView.xib */,
 			);
-			path = Spendings;
+			path = Compact;
 			sourceTree = "<group>";
 		};
 		8BE19F7C24424A6500A7C298 /* Data Source */ = {
@@ -331,15 +326,6 @@
 				8BE19FDA24443AB900A7C298 /* TimelineEventCategory.swift */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		8BE19FD324437C7400A7C298 /* Summary */ = {
-			isa = PBXGroup;
-			children = (
-				8BE19FD424437C7400A7C298 /* SummaryView.swift */,
-				8BE19FD524437C7400A7C298 /* SummaryView.xib */,
-			);
-			path = Summary;
 			sourceTree = "<group>";
 		};
 		A2A20C502180CDAEC5CF1D97 /* Pods */ = {
@@ -477,8 +463,8 @@
 			files = (
 				8BE19FA124424A6500A7C298 /* TimelineMinimalHeaderView.xib in Resources */,
 				8BE19FA324424A6500A7C298 /* TimelineRegularHeaderView.xib in Resources */,
-				8BE19F9C24424A6500A7C298 /* TimelineSpendingsHeaderView.xib in Resources */,
-				8BE19F9B24424A6500A7C298 /* TimelineSpendingsTableViewCell.xib in Resources */,
+				8BE19F9C24424A6500A7C298 /* TimelineCompactHeaderView.xib in Resources */,
+				8BE19F9B24424A6500A7C298 /* TimelineCompactTableViewCell.xib in Resources */,
 				8BE19FA024424A6500A7C298 /* TimelineMinimalTableViewCell.xib in Resources */,
 				8BE19F9724424A6500A7C298 /* BubbleLineView.xib in Resources */,
 				8BE19FA624424A6500A7C298 /* TimelineRegularTableViewCell.xib in Resources */,
@@ -500,7 +486,6 @@
 				8BD3744F2441BFBC00404989 /* Assets.xcassets in Resources */,
 				8BE19FD224437B1800A7C298 /* TimelineTableViewController.xib in Resources */,
 				8BE19FD024437B1800A7C298 /* NewEventViewController.xib in Resources */,
-				8BE19FD724437C7400A7C298 /* SummaryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +626,7 @@
 				8BE19F9624424A6500A7C298 /* BubbleLineView.swift in Sources */,
 				8BE19F8D24424A6500A7C298 /* TimelineCellProtocol.swift in Sources */,
 				8BE19FAB2442685D00A7C298 /* Array+Utils.swift in Sources */,
-				8BE19F9924424A6500A7C298 /* TimelineSpendingsHeaderView.swift in Sources */,
+				8BE19F9924424A6500A7C298 /* TimelineCompactHeaderView.swift in Sources */,
 				8BE19FC7244365A900A7C298 /* SpendingData.swift in Sources */,
 				8BE19F8924424A6500A7C298 /* TimelineEvent.swift in Sources */,
 				8BE19F9524424A6500A7C298 /* TimelineTableViewDataSourceProtocol.swift in Sources */,
@@ -650,7 +635,7 @@
 				8BE19FD9244431A400A7C298 /* TimelineTableView.swift in Sources */,
 				8BE19F9D24424A6500A7C298 /* TimelineTableViewSectionDataSource.swift in Sources */,
 				8BE19F9F24424A6500A7C298 /* TimelineMinimalHeaderView.swift in Sources */,
-				8BE19F9A24424A6500A7C298 /* TimelineSpendingsTableViewCell.swift in Sources */,
+				8BE19F9A24424A6500A7C298 /* TimelineCompactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,7 +654,6 @@
 				8BE19FCE24437B1800A7C298 /* TimelineTableViewController.swift in Sources */,
 				8BE19FDB24443AB900A7C298 /* TimelineEventCategory.swift in Sources */,
 				8BD374462441BFBB00404989 /* AppDelegate.swift in Sources */,
-				8BE19FD624437C7400A7C298 /* SummaryView.swift in Sources */,
 				8BE19FD124437B1800A7C298 /* NewEventViewController.swift in Sources */,
 				8BE19FCF24437B1800A7C298 /* TimelineTabViewController.swift in Sources */,
 			);
